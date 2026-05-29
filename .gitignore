@@ -1,2 +1,5 @@
 # Django
 __pycache__/
+
+# Python coverage
+.coverage
