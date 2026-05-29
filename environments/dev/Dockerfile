@@ -1,12 +1,15 @@
 FROM python:3.14.5-alpine3.23
 
+ARG USER_ID
+ARG GROUP_ID
+
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
 ENV DJANGO_SETTINGS_MODULE=core.settings.dev
 
-RUN addgroup -g 10001 dev && \
-    adduser -u 10001 -G dev -h /home/dev -s /bin/sh -D dev
+RUN addgroup -g ${GROUP_ID} dev && \
+    adduser -u ${USER_ID} -G dev -h /home/dev -s /bin/sh -D dev
 
 WORKDIR /app
 
