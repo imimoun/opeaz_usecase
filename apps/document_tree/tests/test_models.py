@@ -28,7 +28,9 @@ class DeleteTreeEntityTestCase(
     def test_delete_groupement(
         self,
     ):
-        """If a Groupement is deleted, then the associated TreeEntity is also deleted."""
+        """If a Groupement is deleted, then the associated
+            TreeEntity is also deleted.
+        """
         groupement = Groupement.objects.create(
             name="Test Groupement",
         )
@@ -54,7 +56,9 @@ class DeleteTreeEntityTestCase(
     def test_delete_pharmacy(
         self,
     ):
-        """If a Pharmacy is deleted, then the associated TreeEntity is also deleted."""
+        """If a Pharmacy is deleted, then the associated
+            TreeEntity is also deleted.
+        """
         pharmacy = Pharmacy.objects.create(
             name="Test Pharmacy",
         )
@@ -80,7 +84,9 @@ class DeleteTreeEntityTestCase(
     def test_delete_laboratory(
         self,
     ):
-        """If a Laboratory is deleted, then the associated TreeEntity is also deleted."""
+        """If a Laboratory is deleted, then the associated
+            TreeEntity is also deleted.
+        """
         laboratory = Laboratory.objects.create(
             name="Test Laboratory",
             code="LAB001",
@@ -131,7 +137,9 @@ class DeleteTreeFileTestCase(
     def test_delete_document(
         self,
     ):
-        """If a Document is deleted, then the associated TreeFile is also deleted."""
+        """If a Document is deleted, then the associated
+            TreeFile is also deleted.
+        """
         doc = Document.objects.create(
             laboratory=self.laboratory,
             name="Doc A",
@@ -161,7 +169,9 @@ class DeleteTreeFileTestCase(
     def test_delete_flyer(
         self,
     ):
-        """If a Flyer is deleted, then the associated TreeFile is also deleted."""
+        """If a Flyer is deleted, then the associated
+            TreeFile is also deleted.
+        """
         flyer = Flyer.objects.create(
             laboratory=self.laboratory,
             title="Flyer A",
@@ -193,7 +203,9 @@ class DeleteTreeFileTestCase(
     def test_delete_commercial_condition(
         self,
     ):
-        """If a CommercialCondition is deleted, then the associated TreeFile is also deleted."""
+        """If a CommercialCondition is deleted, then the associated
+            TreeFile is also deleted.
+        """
         cc = CommercialCondition.objects.create(
             laboratory=self.laboratory,
             name="CC A",
@@ -262,7 +274,9 @@ class DeleteSharedTreeElementTestCase(
     def test_delete_tree_folder(
         self,
     ):
-        """If a TreeFolder is deleted, then the associated SharedTreeElement is also deleted."""
+        """If a TreeFolder is deleted, then the associated
+            SharedTreeElement is also deleted.
+        """
         ct = ContentType.objects.get_for_model(
             model=TreeFolder,
         )
@@ -286,7 +300,9 @@ class DeleteSharedTreeElementTestCase(
     def test_delete_tree_file(
         self,
     ):
-        """If a TreeFile is deleted, then the associated SharedTreeElement is also deleted."""
+        """If a TreeFile is deleted, then the associated
+            SharedTreeElement is also deleted.
+        """
         ct = ContentType.objects.get_for_model(
             model=TreeFile,
         )

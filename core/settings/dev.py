@@ -1,6 +1,10 @@
-from ._base import *
+from ._base import *  # noqa: F401, F403
 
-SECRET_KEY = 'django-insecure-0a9@ay*a10+cqq+@9&abml9enzz=u872bqra3pjo2i-sdelo+f'
+SECRET_KEY = (
+    'django-' +
+    'insecure-' +
+    '0a9@ay*a10+cqq+@9&abml9enzz=u872bqra3pjo2i-sdelo+f'
+)
 
 DEBUG = True
 

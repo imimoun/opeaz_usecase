@@ -1,4 +1,9 @@
 -r _base.txt
--r _test.txt
 
 coverage==7.14.1
+flake8==7.3.0
+
+# Dependency:
+mccabe==0.7.0
+pycodestyle==2.14.0
+pyflakes==3.4.0
