@@ -1,0 +1,34 @@
+services:
+  db:
+    image: postgres:18.4-alpine3.23
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    environment:
+      - POSTGRES_DB=opeaz_db
+      - POSTGRES_USER=opeaz_user
+      - POSTGRES_PASSWORD=opeaz_pwd
+    ports:
+      - "5432:5432"
+
+  web:
+    build:
+      context: ../../
+      dockerfile: ./environments/dev/Dockerfile
+      args:
+        - USER_ID=${USER_ID}
+        - GROUP_ID=${GROUP_ID}
+    volumes:
+      - ../../:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=opeaz_db
+      - DB_USER=opeaz_user
+      - DB_PASSWORD=opeaz_pwd
+      - DB_PORT=5432
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
