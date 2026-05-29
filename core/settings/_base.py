@@ -11,13 +11,15 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 from pathlib import Path
 import os
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -25,6 +27,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+LOCAL_APPS = [
+    'apps.opeaz_heart.apps.OpeazHeartConfig',
+]
+
+INSTALLED_APPS = (
+    DJANGO_APPS +
+    LOCAL_APPS
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
