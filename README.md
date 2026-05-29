@@ -12,7 +12,7 @@ git clone https://github.com/imimoun/opeaz_usecase.git
 cd opeaz_usecase
 
 # Build and run the docker containers
-docker compose -f environments/dev/docker-compose.yml up
+export USER_ID=$(id -u);export GROUP_ID=$(id -g);docker compose -f environments/dev/docker-compose.yml up --build
 # Open http://127.0.0.1:8000/
 
 # Set up database
