@@ -29,6 +29,7 @@ DJANGO_APPS = [
 ]
 
 LOCAL_APPS = [
+    'apps.document_tree.apps.DocumentTreeConfig',
     'apps.opeaz_heart.apps.OpeazHeartConfig',
 ]
 
