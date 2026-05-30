@@ -16,7 +16,6 @@ class TreeEntityAdmin(admin.ModelAdmin):
         "original_entity_ct",
         "original_entity_id",
     )
-    raw_id_fields = ("original_entity_ct",)
 
 
 @admin.register(TreeFolder)
@@ -49,7 +48,6 @@ class TreeFileAdmin(admin.ModelAdmin):
     raw_id_fields = (
         "tree_entity",
         "tree_folder",
-        "original_file_ct",
     )
 
 
@@ -61,7 +59,4 @@ class SharedTreeElementAdmin(admin.ModelAdmin):
         "original_tree_element_ct",
         "original_tree_element_id",
     )
-    raw_id_fields = (
-        "tree_entity",
-        "original_tree_element_ct",
-    )
+    raw_id_fields = ("tree_entity",)
