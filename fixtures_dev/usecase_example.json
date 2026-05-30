@@ -1,0 +1,208 @@
+[
+{
+    "model": "opeaz_heart.groupement",
+    "pk": 1,
+    "fields": {
+        "name": "CPC"
+    }
+},
+{
+    "model": "opeaz_heart.pharmacy",
+    "pk": 1,
+    "fields": {
+        "name": "Pharmacie groupement CPC",
+        "groupement": 1
+    }
+},
+{
+    "model": "opeaz_heart.laboratory",
+    "pk": 1,
+    "fields": {
+        "name": "Nuxe",
+        "code": "Nuxe1"
+    }
+},
+{
+    "model": "opeaz_heart.laboratory",
+    "pk": 2,
+    "fields": {
+        "name": "Bioderma",
+        "code": "Bioderma1"
+    }
+},
+{
+    "model": "opeaz_heart.document",
+    "pk": 1,
+    "fields": {
+        "laboratory": 1,
+        "name": "Attestion TVA",
+        "file": "fixtures_dev/usecase_example_files/Attestion_TVA.txt",
+        "created_at": "2026-05-30T21:18:07.572Z"
+    }
+},
+{
+    "model": "opeaz_heart.document",
+    "pk": 2,
+    "fields": {
+        "laboratory": 1,
+        "name": "Brief produit",
+        "file": "fixtures_dev/usecase_example_files/Brief_produit.txt",
+        "created_at": "2026-05-30T21:28:16.774Z"
+    }
+},
+{
+    "model": "opeaz_heart.flyer",
+    "pk": 1,
+    "fields": {
+        "laboratory": 1,
+        "title": "Flyer Solaires",
+        "image": "fixtures_dev/usecase_example_files/Flyer_Solaires.png",
+        "start_at": "2025-01-01",
+        "end_at": "2025-02-01"
+    }
+},
+{
+    "model": "opeaz_heart.commercialcondition",
+    "pk": 1,
+    "fields": {
+        "laboratory": 1,
+        "name": "Conditions générales",
+        "text": "Texte des Conditions générales",
+        "year": 2025
+    }
+},
+{
+    "model": "document_tree.treeentity",
+    "pk": 1,
+    "fields": {
+        "external_id": "0f0c6fa3-a529-4170-b8e6-d7e82cccf96a",
+        "original_entity_ct": [
+            "opeaz_heart",
+            "groupement"
+        ],
+        "original_entity_id": 1
+    }
+},
+{
+    "model": "document_tree.treeentity",
+    "pk": 2,
+    "fields": {
+        "external_id": "8581d6a1-1528-4816-ae34-1870b7723a01",
+        "original_entity_ct": [
+            "opeaz_heart",
+            "laboratory"
+        ],
+        "original_entity_id": 1
+    }
+},
+{
+    "model": "document_tree.treeentity",
+    "pk": 3,
+    "fields": {
+        "external_id": "25edb319-5bb4-4527-b274-1bcbe455aaea",
+        "original_entity_ct": [
+            "opeaz_heart",
+            "laboratory"
+        ],
+        "original_entity_id": 2
+    }
+},
+{
+    "model": "document_tree.treeentity",
+    "pk": 4,
+    "fields": {
+        "external_id": "9337073f-44c7-4e2a-b926-3942119f04db",
+        "original_entity_ct": [
+            "opeaz_heart",
+            "pharmacy"
+        ],
+        "original_entity_id": 1
+    }
+},
+{
+    "model": "document_tree.treefolder",
+    "pk": 1,
+    "fields": {
+        "tree_folder": null,
+        "external_id": "050461bb-4266-425d-a768-1b87e1e5187e",
+        "name": "Conditions 2025",
+        "tree_entity": 1
+    }
+},
+{
+    "model": "document_tree.treefolder",
+    "pk": 2,
+    "fields": {
+        "tree_folder": null,
+        "external_id": "597215c4-80ef-41cb-b164-51750fd7d745",
+        "name": "Flyers groupement",
+        "tree_entity": 1
+    }
+},
+{
+    "model": "document_tree.treefolder",
+    "pk": 3,
+    "fields": {
+        "tree_folder": null,
+        "external_id": "a3091c01-0624-492d-a10a-71f594c8e027",
+        "name": "Opération printemps",
+        "tree_entity": 2
+    }
+},
+{
+    "model": "document_tree.treefile",
+    "pk": 1,
+    "fields": {
+        "tree_folder": null,
+        "external_id": "215d2a90-6b61-4144-9139-7777f6a18a00",
+        "tree_entity": 4,
+        "original_file_ct": [
+            "opeaz_heart",
+            "document"
+        ],
+        "original_file_id": 1
+    }
+},
+{
+    "model": "document_tree.treefile",
+    "pk": 2,
+    "fields": {
+        "tree_folder": 1,
+        "external_id": "1f68a23f-ed0c-4c45-b922-8ddb6074606f",
+        "tree_entity": 1,
+        "original_file_ct": [
+            "opeaz_heart",
+            "commercialcondition"
+        ],
+        "original_file_id": 1
+    }
+},
+{
+    "model": "document_tree.treefile",
+    "pk": 3,
+    "fields": {
+        "tree_folder": 2,
+        "external_id": "3fc0e0e3-c8ea-4eee-93a9-bba09041725c",
+        "tree_entity": 1,
+        "original_file_ct": [
+            "opeaz_heart",
+            "flyer"
+        ],
+        "original_file_id": 1
+    }
+},
+{
+    "model": "document_tree.treefile",
+    "pk": 4,
+    "fields": {
+        "tree_folder": 3,
+        "external_id": "a6566ca3-0149-4dd8-a9b2-fc960fd4e467",
+        "tree_entity": 2,
+        "original_file_ct": [
+            "opeaz_heart",
+            "document"
+        ],
+        "original_file_id": 2
+    }
+}
+]

@@ -18,4 +18,5 @@ export USER_ID=$(id -u);export GROUP_ID=$(id -g);docker compose -f environments/
 # Set up database
 docker exec -it dev-web-1 python manage.py migrate
 docker exec -it dev-web-1 python manage.py createsuperuser
+docker exec -it dev-web-1 python manage.py loaddata ./fixtures_dev/usecase_example.json
 ```
