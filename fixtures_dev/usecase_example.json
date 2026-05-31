@@ -72,6 +72,13 @@
     }
 },
 {
+    "model": "opeaz_heart.pharmacygroupement",
+    "pk": 1,
+    "fields": {
+        "groupement": 1
+    }
+},
+{
     "model": "document_tree.treeentity",
     "pk": 1,
     "fields": {
@@ -115,6 +122,18 @@
         "original_entity_ct": [
             "opeaz_heart",
             "pharmacy"
+        ],
+        "original_entity_id": 1
+    }
+},
+{
+    "model": "document_tree.treeentity",
+    "pk": 5,
+    "fields": {
+        "external_id": "26edaa10-6615-4dc7-949b-31793c17dae6",
+        "original_entity_ct": [
+            "opeaz_heart",
+            "pharmacygroupement"
         ],
         "original_entity_id": 1
     }
@@ -203,6 +222,42 @@
             "document"
         ],
         "original_file_id": 2
+    }
+},
+{
+    "model": "document_tree.sharedtreeelement",
+    "pk": 1,
+    "fields": {
+        "tree_entity": 5,
+        "original_tree_element_ct": [
+            "document_tree",
+            "treefolder"
+        ],
+        "original_tree_element_id": 1
+    }
+},
+{
+    "model": "document_tree.sharedtreeelement",
+    "pk": 2,
+    "fields": {
+        "tree_entity": 4,
+        "original_tree_element_ct": [
+            "document_tree",
+            "treefolder"
+        ],
+        "original_tree_element_id": 2
+    }
+},
+{
+    "model": "document_tree.sharedtreeelement",
+    "pk": 3,
+    "fields": {
+        "tree_entity": 4,
+        "original_tree_element_ct": [
+            "document_tree",
+            "treefolder"
+        ],
+        "original_tree_element_id": 3
     }
 }
 ]

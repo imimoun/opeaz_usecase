@@ -70,3 +70,10 @@ class CommercialCondition(models.Model):
     )
     text = models.TextField()
     year = models.PositiveSmallIntegerField()
+
+
+class PharmacyGroupement(models.Model):
+    """Model showing the pharmacy of the groupement as an entity.
+        Used to share tree entity to all pharmacy of the groupement.
+    """
+    groupement = models.OneToOneField(Groupement, on_delete=models.CASCADE)

@@ -7,6 +7,7 @@ from .models import (
     Groupement,
     Laboratory,
     Pharmacy,
+    PharmacyGroupement,
 )
 
 
@@ -49,3 +50,10 @@ class CommercialConditionAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'laboratory', 'year',)
     list_filter = ('laboratory', 'year',)
     search_fields = ('name', 'laboratory__name', 'text',)
+
+
+@admin.register(PharmacyGroupement)
+class PharmacyGroupementAdmin(admin.ModelAdmin):
+    list_display = ('id', 'groupement',)
+    list_filter = ('groupement',)
+    search_fields = ('groupement__name',)

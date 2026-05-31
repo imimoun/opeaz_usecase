@@ -23,6 +23,7 @@ from apps.opeaz_heart.models import (
     Groupement,
     Laboratory,
     Pharmacy,
+    PharmacyGroupement,
 )
 
 
@@ -45,6 +46,7 @@ class TreeEntity(
                 'groupement',
                 'laboratory',
                 'pharmacy',
+                'pharmacygroupement',
             ],
         },
     )
@@ -163,6 +165,10 @@ class SharedTreeElement(
 @receiver(
     post_delete,
     sender=Laboratory,
+)
+@receiver(
+    post_delete,
+    sender=PharmacyGroupement,
 )
 def delete_tree_entity(
     sender,
